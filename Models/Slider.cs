@@ -11,8 +11,6 @@ namespace Eduhome.Models
         [StringLength(500)]
         public string MainTitle { get; set; }
         [StringLength (500)]
-        public string Subtitle { get; set; }
-        [StringLength(500)]
         public string Description { get; set; }
         [StringLength(500)]
         public string Image { get; set; }

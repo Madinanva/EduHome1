@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Eduhome.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20221212111614_CreatedSlidersTable")]
-    partial class CreatedSlidersTable
+    [Migration("20221212183243_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -76,10 +76,6 @@ namespace Eduhome.Migrations
                         .HasMaxLength(500);
 
                     b.Property<string>("PageLink")
-                        .HasColumnType("nvarchar(500)")
-                        .HasMaxLength(500);
-
-                    b.Property<string>("Subtitle")
                         .HasColumnType("nvarchar(500)")
                         .HasMaxLength(500);
 

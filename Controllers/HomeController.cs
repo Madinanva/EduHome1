@@ -1,5 +1,7 @@
 ﻿using Eduhome.DAL;
+using Eduhome.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,9 +16,11 @@ namespace Eduhome.Controllers
         {
             _context = context;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            List<Slider> sliders = await _context.Sliders.Where(s=> s.IsDeleted == false).ToListAsync();
+
+            return View(sliders);
         }
     }
 }
