@@ -6,15 +6,11 @@ using System.Threading.Tasks;
 
 namespace Eduhome.Models
 {
-    public class About
+    public class Speakers:BaseEntity
     {
-        public int Id { get; set; }
         [StringLength(2000)]
-        public string Title { get; set; }
+        public string FullName { get; set; }
         [StringLength(2000)]
-        public string Description { get; set; }
-        public string DescriptionImage { get; set; }
-
-
+        public string Profession { get; set; }
     }
 }

@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 
 namespace Eduhome.Models
 {
-    public class About
+    public class Social: BaseEntity
     {
-        public int Id { get; set; }
         [StringLength(2000)]
-        public string Title { get; set; }
+        public string Name { get; set; }
         [StringLength(2000)]
-        public string Description { get; set; }
-        public string DescriptionImage { get; set; }
-
-
+        public string Icon { get; set; }
+        [StringLength(2000)]
+        public string Link { get; set; }
     }
 }

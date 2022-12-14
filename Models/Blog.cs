@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,13 +8,18 @@ namespace Eduhome.Models
 {
     public class Blog: BaseEntity
     {
+        [StringLength(200)]
         public string Name { get; set; }
+        [StringLength(50)]
         public string BloggerName { get; set; }
         public DateTime Date { get; set; }
+        [StringLength(2000)]
         public string Comment { get; set; }
-        public string Description { get; set; }
         public string BlogImage { get; set; }
-        public List<BlogCategory>BlogCategories { get; set; }
+        [StringLength(2000)]
+        public string Content { get; set; }
+        public Category Category { get; set; }
+        public int CategoryId { get; set; }
 
     }
 }

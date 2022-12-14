@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace Eduhome.Models
 {
-    public class BlogCategory
+    public class Tags: BaseEntity
     {
-        public int id { get; set; }
+        [StringLength(2000)]
         public string Name { get; set; }
-        public List<Blog>Blogs { get; set; }
     }
 }
