@@ -16,10 +16,5 @@ namespace Eduhome.Models
         public string Venue { get; set; }
         [StringLength(2000)]
         public string Content { get; set; }
-        public List<Speakers> Speakers { get; set; }
-        public List<Category> Categories { get; set; }
-        public List<Messages>Messages { get; set; }
-        public List<Tags> Tags { get; set; }
-        public List<Subscribe> Subscribes { get; set; }
     }
 }

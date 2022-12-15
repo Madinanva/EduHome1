@@ -39,10 +39,6 @@ namespace Eduhome.Models
         public string Assesments { get; set; }
         [StringLength(2000)]
         public string Price { get; set; }
-        public List<Messages> Messages { get; set; }
-        public List<Category> Categories { get; set; }
         public int CategoryId { get; set; }
-        public List<Social> Socials { get; set; }
-        public List<Subscribe> Subscribes { get; set; }
     }
 }

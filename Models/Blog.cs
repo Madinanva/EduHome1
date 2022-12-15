@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Eduhome.Models
 {
-    public class Blog: BaseEntity
+    public class Blog : BaseEntity
     {
         [StringLength(200)]
         public string Name { get; set; }

@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace Eduhome.Models
 {
-    public class Subscribe: BaseEntity
+    public class BlogMessage: BaseEntity
     {
         [StringLength(2000)]
-        public string Description { get; set; }
+        public string Name { get; set; }
         [StringLength(2000)]
         public string Email { get; set; }
+        [StringLength(2000)]
+        public string Subject { get; set; }
+        [StringLength(2000)]
+        public string Message { get; set; }
     }
 }

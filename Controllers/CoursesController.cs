@@ -12,5 +12,9 @@ namespace Eduhome.Controllers
         {
             return View();
         }
+        public IActionResult Detail()
+        {
+            return View();
+        }
     }
 }

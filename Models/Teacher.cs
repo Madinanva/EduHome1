@@ -31,7 +31,5 @@ namespace Eduhome.Models
         public string Phone { get; set; }
         [StringLength(2000)]
         public string Skype { get; set; }
-        public List<Skills> Skills { get; set; }
-        public List<Social> Socials { get; set; }
     }
 }
