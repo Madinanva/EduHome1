@@ -8,8 +8,6 @@ namespace Eduhome.Models
 {
     public class Blog : BaseEntity
     {
-        [StringLength(200)]
-        public string Name { get; set; }
         [StringLength(50)]
         public string Author { get; set; }
         public DateTime Date { get; set; }

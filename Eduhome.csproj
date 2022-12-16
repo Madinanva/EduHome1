@@ -11,6 +11,8 @@
     <Compile Remove="Migrations\20221215175300_UpdatedCourse1Table.Designer.cs" />
     <Compile Remove="Migrations\20221215180405_UpdateCourse.cs" />
     <Compile Remove="Migrations\20221215180405_UpdateCourse.Designer.cs" />
+    <Compile Remove="Migrations\20221216115042_UpdatedEventTable3.cs" />
+    <Compile Remove="Migrations\20221216115042_UpdatedEventTable3.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

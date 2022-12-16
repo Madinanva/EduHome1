@@ -7,7 +7,6 @@ namespace Eduhome.Models
 {
     public class Home:BaseEntity
     {
-        public string Title { get; set; }
-        public string Content { get; set; }
+
     }
 }

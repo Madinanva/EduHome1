@@ -25,7 +25,11 @@ namespace Eduhome.Controllers
                 Sliders = _context.Sliders.Where(s => s.IsDeleted == false).ToList(),
                 LeftNoticeBoards = _context.LeftNoticeBoards.Where(l => l.IsDeleted == false).ToList(),
                 RightNoticeBoards = _context.RightNoticeBoards.Where(r => r.IsDeleted == false).ToList(),
-                Courses = _context.Courses.Where(c => !c.IsDeleted).ToList()
+                Courses = _context.Courses.Where(c => !c.IsDeleted).ToList(),
+                Settings = _context.Settings.ToDictionary(k=>k.Key, v=>v.Value),
+                Events = _context.Events.Where(e => !e.IsDeleted).ToList(),
+                Chooses = _context.Chooses.Where(ch => !ch.IsDeleted).ToList(),
+                Testimonials = _context.Testimonials.Where(t => !t.IsDeleted).ToList()
             };
             return View(homeVM);
         }

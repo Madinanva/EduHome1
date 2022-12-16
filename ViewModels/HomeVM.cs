@@ -16,5 +16,7 @@ namespace Eduhome.ViewModels
         public IEnumerable<Blog> Blogs { get; set; }
         public IEnumerable<Testimonial> Testimonials { get; set; }
         public IEnumerable<Subscribe> Subscribes { get; set; }
+        public IEnumerable<Choose> Chooses { get; set; }
+        public Dictionary<string, string> Settings { get; set; }
     }
 }

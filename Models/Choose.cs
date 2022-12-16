@@ -6,15 +6,11 @@ using System.Threading.Tasks;
 
 namespace Eduhome.Models
 {
-    public class Testimonial:BaseEntity
+    public class Choose: BaseEntity
     {
         [StringLength(2000)]
-        public string Name { get; set; }
+        public string Title { get; set; }
         [StringLength(2000)]
         public string Content { get; set; }
-        [StringLength(2000)]
-        public string Image { get; set; }
-        [StringLength(2000)]
-        public string Profession { get; set; }
     }
 }
