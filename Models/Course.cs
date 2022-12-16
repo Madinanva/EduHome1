@@ -13,10 +13,6 @@ namespace Eduhome.Models
         public string CourseImage { get; set; }
         [StringLength(2000)]
         public string Description { get; set; }
-        [StringLength(200)]
-        public string CourseName { get; set; }
-        [StringLength(2000)]
-        public string Content { get; set; }
         [StringLength(2000)]
         public string AboutCourse { get; set; }
         [StringLength(2000)]
@@ -25,8 +21,7 @@ namespace Eduhome.Models
         public string Certification { get; set; }
         [StringLength(2000)]
         public string FeaturesName { get; set; }
-        [StringLength(50)]
-        public string Starts { get; set; }
+        public DateTime Start { get; set; }
         [StringLength(30)]
         public string Duration { get; set; }
         [StringLength(30)]
@@ -34,11 +29,13 @@ namespace Eduhome.Models
         [StringLength(50)]
         public string SkillLevel { get; set; }
         [StringLength(2000)]
-        public string Students { get; set; }
+        public int Students { get; set; }
+        [StringLength(2000)]
+        public String Languages { get; set; }
         [StringLength(2000)]
         public string Assesments { get; set; }
         [StringLength(2000)]
-        public string Price { get; set; }
-        public int CategoryId { get; set; }
+        public int Price { get; set; }
+        //public int CategoryId { get; set; }
     }
 }

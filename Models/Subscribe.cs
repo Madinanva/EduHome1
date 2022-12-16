@@ -9,8 +9,6 @@ namespace Eduhome.Models
     public class Subscribe: BaseEntity
     {
         [StringLength(2000)]
-        public string Description { get; set; }
-        [StringLength(2000)]
         public string Email { get; set; }
     }
 }

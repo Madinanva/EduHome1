@@ -1,7 +1,9 @@
-﻿@model List<Slider>
-@{
-    ViewData["Title"] = "Index";
-    Layout = null;
+﻿@inject ILayoutServices layoutservices
+@model HomeVM
+
+@{ Dictionary<string, string> settings = await layoutservices.GetSettingsAsync();
+   ViewData["Title"] = "Index";
+   Layout = null;
 }
 
 <!doctype html>
@@ -43,43 +45,37 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-3 col-xs-6">
                         <div class="logo">
-                            <a href="index.html"><img src="~/assets/img/logo/logo.png" alt="eduhome" /></a>
+                            <a asp-controller="home" asp-action="index"><img src="~/assets/img/logo/@settings.First(s=>s.Key == "Logo").Value" alt="eduhome" /></a>
                         </div>
                     </div>
                     <div class="col-md-9 col-sm-9 col-xs-12">
                         <div class="content-wrapper one">
                             <!-- Main Menu Start -->
+
                             <div class="main-menu one text-right">
                                 <nav>
                                     <ul>
                                         <li>
-                                            <a asp-action="index" asp-controller="home">Home</a>
+                                            <a asp-controller="home" asp-action="index">Home</a>
                                         </li>
                                         <li><a asp-action="index" asp-controller="about">About</a></li>
                                         <li>
-                                            <a asp-action="index" asp-controller="course">Courses</a>
+                                            <a asp-action="index" asp-controller="course">courses</a>
+
                                         </li>
                                         <li>
-                                            <ul>
-                                                <a asp-action="detail" asp-controller="course">Courses details</a>
-                                            </ul>
+                                            <a asp-action="index" asp-controller="event">event</a>
+
+                                        </li>
+                                        <li class="hidden-sm">
+                                            <a asp-action="index" asp-controller="teacher">teacher</a>
+
                                         </li>
                                         <li>
-                                            <a asp-action="index" asp-controller="teacher">Teachers</a>
-                                                </li>
-                                                <li><a href="teacher-details.html">teacher details</a></li>
-                                            </ul>
+                                            <a asp-action="index" asp-controller="blog">blog</a>
+
                                         </li>
-                                        <li>
-                                            <a href="blog.html">blog</a>
-                                            <ul>
-                                                <li><a href="blog.html">blog</a></li>
-                                                <li><a href="blog-left-side-bar.html">blog left sidebar</a></li>
-                                                <li><a href="blog-right-side-bar.html">blog righ sidebar</a></li>
-                                                <li><a href="blog-details.html">blog details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a asp-action="index" asp-controller="contact">Contact</a></li>
                                         <li><a href="#">Buy Now</a>
                                     </ul>
                                 </nav>
@@ -94,10 +90,12 @@
     </header>
     <!-- Header Area End -->
     <!-- Background Area Start -->
- <section id="slider-container" class="slider-area">
+    <section id="slider-container" class="slider-area">
         <div class="slider-owl owl-theme owl-carousel">
-            <!-- Start Slingle Slide -->
-            <div class="single-slide item" style="background-image: url(assets/img/slider/slider1.jpg)">
+            @foreach (Slider slider in Model.Sliders)
+            {
+                <!-- Start Slingle Slide -->
+            <div class="single-slide item" style="background-image: url(assets/img/slider/@slider.Image)">
                 <!-- Start Slider Content -->
                 <div class="slider-content-area">
                     <div class="container">
@@ -105,10 +103,9 @@
                             <div class="col-md-7 col-md-offset-left-5">
                                 <div class="slide-content-wrapper">
                                     <div class="slide-content">
-                                        <h3>EDUCATION MAKES </h3>
-                                        <h2>PROPER HUMANITY </h2>
-                                        <p>I must explain to you how all this mistaken idea of denouncing pleasure and prsing pain was born and I will give you a complete account of the system  </p>
-                                        <a class="default-btn" href="about.html">Learn more</a>
+                                        <h3>@slider.MainTitle </h3>
+                                        <p>@slider.Description</p>
+                                        <a class="default-btn" asp-action="index" asp-controller="about">Learn more</a>
                                     </div>
                                 </div>
                             </div>
@@ -130,7 +127,7 @@
                                         <h3>EDUCATION MAKES </h3>
                                         <h2>PROPER HUMANITY </h2>
                                         <p>I must explain to you how all this mistaken idea of denouncing pleasure and prsing pain was born and I will give you a complete account of the system  </p>
-                                        <a class="default-btn" href="about.html">Learn more</a>
+                                        <a class="default-btn" asp-action="index" asp-controller="about">Learn more</a>
                                     </div>
                                 </div>
                             </div>
@@ -139,6 +136,7 @@
                 </div>
                 <!-- Start Slider Content -->
             </div>
+            }
             <!-- End Slingle Slide -->
             <!-- Start Slingle Slide -->
             <div class="single-slide item" style="background-image: url(assets/img/slider/slider3.jpg)">
@@ -152,7 +150,7 @@
                                         <h3>EDUCATION MAKES </h3>
                                         <h2>PROPER HUMANITY </h2>
                                         <p>I must explain to you how all this mistaken idea of denouncing pleasure and prsing pain was born and I will give you a complete account of the system  </p>
-                                        <a class="default-btn" href="about.html">Learn more</a>
+                                        <a class="default-btn" asp-action="index" asp-controller="course">Learn more</a>
                                     </div>
                                 </div>
                             </div>
@@ -172,42 +170,14 @@
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="notice-left">
                         <h3>notice board</h3>
-                        <div class="single-notice-left mb-25 pb-25">
-                            <h4>5, June 2017</h4>
-                            <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                        </div>
-                        <div class="single-notice-left mb-25 pb-25">
-                            <h4>4, June 2017</h4>
-                            <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                        </div>
-                        <div class="single-notice-left pb-75">
-                            <h4>3, June 2017</h4>
-                            <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                        </div>
-                        <div class="single-notice-left mb-25 pb-25">
-                            <h4>5, June 2017</h4>
-                            <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                        </div>
-                        <div class="single-notice-left mb-25 pb-25">
-                            <h4>4, June 2017</h4>
-                            <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                        </div>
-                        <div class="single-notice-left pb-70">
-                            <h4>3, June 2017</h4>
-                            <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                        </div>
-                        <div class="single-notice-left mb-25 pb-25">
-                            <h4>5, June 2017</h4>
-                            <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                        </div>
-                        <div class="single-notice-left mb-25 pb-25">
-                            <h4>4, June 2017</h4>
-                            <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                        </div>
-                        <div class="single-notice-left pb-70">
-                            <h4>3, June 2017</h4>
-                            <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                        </div>
+                        @foreach (LeftNoticeBoard item in Model.LeftNoticeBoards)
+                        {
+                            <div class="single-notice-left mb-25 pb-25">
+                                <h4>@item.Date.ToString("MMMM dd, yyyy")</h4>
+                                <p>@item.Content</p>
+                            </div>
+                        }
+                   
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12">
@@ -258,57 +228,26 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="single-course">
-                        <div class="course-img">
-                            <a href="course-details.html">
-                                <img src="~/assets/img/course/course1.jpg" alt="course">
-                                <div class="course-hover">
-                                    <i class="fa fa-link"></i>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="course-content">
-                            <h3><a href="course-details.html">CSE ENGINEERING</a></h3>
-                            <p>I must explain to you how all this a mistaken idea of denouncing great explorer of the rut the is lder of human happiness</p>
-                            <a class="default-btn" href="course-details.html">read more</a>
-                        </div>
+                @foreach (Course course in Model.Courses.Take(3))
+                {
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="single-course">
+                    <div class="course-img">
+                        <a asp-action="detail" asp-controller="course">
+                            <img src="~/assets/img/course/@course.CourseImage" alt="course">
+                            <div class="course-hover">
+                                <i class="fa fa-link"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="course-content">
+                        <h3><a asp-action="detail" asp-controller="course">@course.Subject</a></h3>
+                        <p>@course.Description</p>
+                        <a class="default-btn" asp-action="detail" asp-controller="course">read more</a>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="single-course">
-                        <div class="course-img">
-                            <a href="course-details.html">
-                                <img src="~/assets/img/course/course2.jpg" alt="course">
-                                <div class="course-hover">
-                                    <i class="fa fa-link"></i>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="course-content">
-                            <h3><a href="course-details.html">CSE ENGINEERING</a></h3>
-                            <p>I must explain to you how all this a mistaken idea of denouncing great explorer of the rut the is lder of human happiness</p>
-                            <a class="default-btn" href="course-details.html">read more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 hidden-sm col-xs-12">
-                    <div class="single-course">
-                        <div class="course-img">
-                            <a href="course-details.html">
-                                <img src="~/assets/img/course/course3.jpg" alt="course">
-                                <div class="course-hover">
-                                    <i class="fa fa-link"></i>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="course-content">
-                            <h3><a href="course-details.html">CSE ENGINEERING</a></h3>
-                            <p>I must explain to you how all this a mistaken idea of denouncing great explorer of the rut the is lder of human happiness</p>
-                            <a class="default-btn" href="course-details.html">read more</a>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            }
             </div>
         </div>
     </div>

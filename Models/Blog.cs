@@ -11,7 +11,7 @@ namespace Eduhome.Models
         [StringLength(200)]
         public string Name { get; set; }
         [StringLength(50)]
-        public string BloggerName { get; set; }
+        public string Author { get; set; }
         public DateTime Date { get; set; }
         [StringLength(2000)]
         public string Comment { get; set; }

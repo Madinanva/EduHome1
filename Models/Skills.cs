@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Eduhome.Models
 {
-    public class Skills
+    public class Skills: BaseEntity
     {
-        public int Id { get; set; }
-        [StringLength(2000)]
         public string Name { get; set; }
         [StringLength(2000)]
         public string Percent { get; set; }

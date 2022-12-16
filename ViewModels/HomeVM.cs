@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Eduhome.ComponentViewModels
+namespace Eduhome.ViewModels
 {
     public class HomeVM
     {
@@ -14,6 +14,7 @@ namespace Eduhome.ComponentViewModels
         public IEnumerable<Course> Courses { get; set; }
         public IEnumerable<Event> Events { get; set; }
         public IEnumerable<Blog> Blogs { get; set; }
+        public IEnumerable<Testimonial> Testimonials { get; set; }
         public IEnumerable<Subscribe> Subscribes { get; set; }
     }
 }

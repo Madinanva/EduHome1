@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Eduhome.ComponentViewModels
 {
-    public class AboutVM
+    public class AboutVM 
     {
         public IEnumerable<Teacher> Teachers { get; set; }
         public IEnumerable<RightNoticeBoard> RightNoticeBoards { get; set; }
         public IEnumerable<Subscribe> Subscribes { get; set; }
+        public IEnumerable<Testimonial> Testimonials { get; set; }
     }
 }
