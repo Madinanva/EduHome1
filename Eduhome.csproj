@@ -13,6 +13,10 @@
     <Compile Remove="Migrations\20221215180405_UpdateCourse.Designer.cs" />
     <Compile Remove="Migrations\20221216115042_UpdatedEventTable3.cs" />
     <Compile Remove="Migrations\20221216115042_UpdatedEventTable3.Designer.cs" />
+    <Compile Remove="Migrations\20221217095653_CreatedSubscribeTable.cs" />
+    <Compile Remove="Migrations\20221217095653_CreatedSubscribeTable.Designer.cs" />
+    <Compile Remove="Migrations\20221217111929_CreatedSocialTable.cs" />
+    <Compile Remove="Migrations\20221217111929_CreatedSocialTable.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

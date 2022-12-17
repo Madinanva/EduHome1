@@ -13,5 +13,13 @@ namespace Eduhome.Models
         public string Key { get; set; }
         [StringLength(2000)]
         public string Value { get; set; }
+        [StringLength(2000)]
+        public string Address { get; set; }
+        [StringLength(2000)]
+        public string Phone1 { get; set; }
+        [StringLength(2000)]
+        public string Phone2 { get; set; }
+        [StringLength(2000)]
+        public string Website { get; set; }
     }
 }

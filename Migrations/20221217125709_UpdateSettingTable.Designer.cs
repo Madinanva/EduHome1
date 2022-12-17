@@ -4,14 +4,16 @@ using Eduhome.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Eduhome.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221217125709_UpdateSettingTable")]
+    partial class UpdateSettingTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -362,39 +364,6 @@ namespace Eduhome.Migrations
                     b.ToTable("Events");
                 });
 
-            modelBuilder.Entity("Eduhome.Models.Home", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime?>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("CreatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("DeletedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("DeletedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("UpdatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Homes");
-                });
-
             modelBuilder.Entity("Eduhome.Models.LeftNoticeBoard", b =>
                 {
                     b.Property<int>("Id")
@@ -638,86 +607,6 @@ namespace Eduhome.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Subscribes");
-                });
-
-            modelBuilder.Entity("Eduhome.Models.Teacher", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("AboutTeacher")
-                        .HasColumnType("nvarchar(2000)")
-                        .HasMaxLength(2000);
-
-                    b.Property<string>("ContactInfo")
-                        .HasColumnType("nvarchar(2000)")
-                        .HasMaxLength(2000);
-
-                    b.Property<DateTime?>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("CreatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Degree")
-                        .HasColumnType("nvarchar(2000)")
-                        .HasMaxLength(2000);
-
-                    b.Property<DateTime?>("DeletedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("DeletedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Experience")
-                        .HasColumnType("nvarchar(2000)")
-                        .HasMaxLength(2000);
-
-                    b.Property<string>("Faculty")
-                        .HasColumnType("nvarchar(2000)")
-                        .HasMaxLength(2000);
-
-                    b.Property<string>("Fullname")
-                        .HasColumnType("nvarchar(2000)")
-                        .HasMaxLength(2000);
-
-                    b.Property<string>("Hobbies")
-                        .HasColumnType("nvarchar(2000)")
-                        .HasMaxLength(2000);
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Mail")
-                        .HasColumnType("nvarchar(2000)")
-                        .HasMaxLength(2000);
-
-                    b.Property<string>("Phone")
-                        .HasColumnType("nvarchar(2000)")
-                        .HasMaxLength(2000);
-
-                    b.Property<string>("Profession")
-                        .HasColumnType("nvarchar(2000)")
-                        .HasMaxLength(2000);
-
-                    b.Property<string>("Skype")
-                        .HasColumnType("nvarchar(2000)")
-                        .HasMaxLength(2000);
-
-                    b.Property<string>("TeachersImage")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("UpdatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Teachers");
                 });
 
             modelBuilder.Entity("Eduhome.Models.Testimonial", b =>

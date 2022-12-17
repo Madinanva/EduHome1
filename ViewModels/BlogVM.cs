@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Eduhome.ComponentViewModels
+namespace Eduhome.ViewModels
 {
     public class BlogVM
     {
@@ -12,5 +12,6 @@ namespace Eduhome.ComponentViewModels
         public IEnumerable<Category> Categories { get; set; }
         public IEnumerable<Tags> Tags { get; set; }
         public IEnumerable<BlogMessage> BlogMessages { get; set; }
+        public IEnumerable<Blog> Blogs { get; set; }
     }
 }

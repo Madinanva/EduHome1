@@ -16,15 +16,17 @@ namespace Eduhome.DAL
         public DbSet<Setting> Settings { get; set; }
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<About> Abouts { get; set; }
-        //public DbSet<Home> Homes { get; set; }
+        public DbSet<Home> Homes { get; set; }
         public DbSet<LeftNoticeBoard> LeftNoticeBoards { get; set; }
         public DbSet<RightNoticeBoard> RightNoticeBoards { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Course> Courses { get; set; }
         public DbSet<Event> Events { get; set; }
-        //public DbSet<Subscribe> Subscribes { get; set; }
+        public DbSet<Subscribe> Subscribes { get; set; }
         public DbSet<Choose> Chooses { get; set; }
         public DbSet<Testimonial> Testimonials { get; set; }
-
+        public DbSet<Social> Socials { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }

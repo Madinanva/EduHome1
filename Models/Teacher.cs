@@ -24,7 +24,7 @@ namespace Eduhome.Models
         [StringLength(2000)]
         public string Faculty { get; set; }
         [StringLength(2000)]
-        public string Name { get; set; }
+        public string ContactInfo { get; set; }
         [StringLength(2000)]
         public string Mail { get; set; }
         [StringLength(2000)]

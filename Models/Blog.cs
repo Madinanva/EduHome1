@@ -14,6 +14,9 @@ namespace Eduhome.Models
         [StringLength(2000)]
         public string Comment { get; set; }
         public string BlogImage { get; set; }
+
+        [StringLength(2000)]
+        public string Title { get; set; }
         [StringLength(2000)]
         public string Content { get; set; }
         public Category Category { get; set; }

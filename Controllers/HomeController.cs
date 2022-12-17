@@ -29,7 +29,10 @@ namespace Eduhome.Controllers
                 Settings = _context.Settings.ToDictionary(k=>k.Key, v=>v.Value),
                 Events = _context.Events.Where(e => !e.IsDeleted).ToList(),
                 Chooses = _context.Chooses.Where(ch => !ch.IsDeleted).ToList(),
-                Testimonials = _context.Testimonials.Where(t => !t.IsDeleted).ToList()
+                Testimonials = _context.Testimonials.Where(t => !t.IsDeleted).ToList(),
+                Blogs = _context.Blogs.Where(b => !b.IsDeleted).ToList(),
+                Subscribes = _context.Subscribes.Where(sb => !sb.IsDeleted).ToList(),
+                Socials = _context.Socials.Where(sc => !sc.IsDeleted).ToList()
             };
             return View(homeVM);
         }
