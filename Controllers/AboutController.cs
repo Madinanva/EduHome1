@@ -27,6 +27,7 @@ namespace Eduhome.Controllers
                 Subscribes = _context.Subscribes.Where(sb => !sb.IsDeleted).ToList(),
                 Testimonials = _context.Testimonials.Where(t => !t.IsDeleted).ToList(),
                 Blogs = _context.Blogs.Where(b =>!b. IsDeleted).ToList(),
+               
             };
 
             return View(aboutVM);

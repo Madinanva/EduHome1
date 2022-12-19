@@ -13,5 +13,7 @@ namespace Eduhome.ViewModels
         public IEnumerable<Speakers> Speakers { get; set; }
         public IEnumerable<Tags> Tags { get; set; }
         public IEnumerable<EventMessage> EventMessages { get; set; }
+        public Event Event { get; set; }
+        public IEnumerable<Event> Events { get; set; }
     }
 }

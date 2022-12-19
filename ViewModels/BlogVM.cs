@@ -13,5 +13,6 @@ namespace Eduhome.ViewModels
         public IEnumerable<Tags> Tags { get; set; }
         public IEnumerable<BlogMessage> BlogMessages { get; set; }
         public IEnumerable<Blog> Blogs { get; set; }
+        public Blog Blog { get; set; }
     }
 }

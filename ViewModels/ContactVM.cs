@@ -8,6 +8,7 @@ namespace Eduhome.ViewModels
 {
     public class ContactVM
     {
+        public IEnumerable<Contact> Contacts { get; set; }
         public IEnumerable<Subscribe> Subscribes { get; set; }
     }
 }

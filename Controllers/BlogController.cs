@@ -19,7 +19,8 @@ namespace Eduhome.Controllers
         {
             BlogVM blogVM = new BlogVM
             {
-                Blogs = _context.Blogs.Where(b => b.IsDeleted == false).ToList()
+                Blogs = _context.Blogs.Where(b => b.IsDeleted == false).ToList(),
+                Subscribes = _context.Subscribes.Where(sb => !sb.IsDeleted).ToList(),
             };
             return View(blogVM);
         }
@@ -27,7 +28,9 @@ namespace Eduhome.Controllers
         {
             BlogVM blogVM = new BlogVM
             {
+                Blog = _context.Blogs.Where(b => b.IsDeleted == false).FirstOrDefault(),
                 Categories = _context.Categories.Where(c => c.IsDeleted == false).ToList(),
+                Subscribes = _context.Subscribes.Where(sb => !sb.IsDeleted).ToList(),
                 Blogs = _context.Blogs.Where(b => b.IsDeleted == false).ToList(),
             };
 

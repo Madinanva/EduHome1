@@ -19,7 +19,7 @@ namespace Eduhome.Models
         public string Title { get; set; }
         [StringLength(2000)]
         public string Content { get; set; }
-        public Category Category { get; set; }
+        public Category Categories { get; set; }
         public int CategoryId { get; set; }
 
     }

@@ -13,7 +13,7 @@ namespace Eduhome.ViewModels
         public IEnumerable<Slider> Sliders { get; set; }
         public IEnumerable<LeftNoticeBoard> LeftNoticeBoards { get; set; }
         public IEnumerable<RightNoticeBoard> RightNoticeBoards { get; set; }
-        public IEnumerable<Course> Courses { get; set; }
+        public IEnumerable<Courses> Courses { get; set; }
         public IEnumerable<Event> Events { get; set; }
         public IEnumerable<Blog> Blogs { get; set; }
         public IEnumerable<Testimonial> Testimonials { get; set; }

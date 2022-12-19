@@ -1,14 +1,13 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Eduhome.Areas.Manage.Controllers
+namespace EduHome.Areas.Manage.Controllers
 {
     [Area("manage")]
-    public class DashboardController : Controller
+    public class DashBoardController : Controller
     {
         public IActionResult Index()
         {

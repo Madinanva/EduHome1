@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Eduhome.DAL;
+using Eduhome.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,13 +10,31 @@ namespace Eduhome.Controllers
 {
     public class CoursesController : Controller
     {
-        public IActionResult Index()
+        public class CourseController : Controller
         {
-            return View();
-        }
-        public IActionResult Detail()
-        {
-            return View();
+            private readonly AppDbContext _context;
+            public CourseController(AppDbContext context)
+            {
+                _context = context;
+            }
+            public IActionResult Index()
+            {
+                CoursesVM courseVM = new CoursesVM
+                {
+                    Courses = _context.Courses.Where(c => c.IsDeleted == false).ToList()
+                };
+
+                return View(courseVM);
+            }
+            public IActionResult Detail()
+            {
+                CoursesVM courseVM = new CoursesVM
+                {
+                    Categories = _context.Categories.Where(ct => ct.IsDeleted == false).ToList(),
+                    Courses = _context.Courses.Where(c => c.IsDeleted == false).ToList()
+                };
+                return View(courseVM);
+            }
         }
     }
 }

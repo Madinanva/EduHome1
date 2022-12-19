@@ -17,6 +17,26 @@
     <Compile Remove="Migrations\20221217095653_CreatedSubscribeTable.Designer.cs" />
     <Compile Remove="Migrations\20221217111929_CreatedSocialTable.cs" />
     <Compile Remove="Migrations\20221217111929_CreatedSocialTable.Designer.cs" />
+    <Compile Remove="Migrations\20221218080440_UpdatedBlogTable3.cs" />
+    <Compile Remove="Migrations\20221218080440_UpdatedBlogTable3.Designer.cs" />
+    <Compile Remove="Migrations\20221218081441_UpdatedBlogTablev4.cs" />
+    <Compile Remove="Migrations\20221218081441_UpdatedBlogTablev4.Designer.cs" />
+    <Compile Remove="Migrations\20221218081603_UpdatedBlogTablev4.cs" />
+    <Compile Remove="Migrations\20221218081603_UpdatedBlogTablev4.Designer.cs" />
+    <Compile Remove="Migrations\20221218081734_UpdatedBlogTablev4.cs" />
+    <Compile Remove="Migrations\20221218081734_UpdatedBlogTablev4.Designer.cs" />
+    <Compile Remove="Migrations\20221218083834_UpdatedBlogTablev4.cs" />
+    <Compile Remove="Migrations\20221218083834_UpdatedBlogTablev4.Designer.cs" />
+    <Compile Remove="Migrations\20221218223959_CreatedSkillTable.cs" />
+    <Compile Remove="Migrations\20221218223959_CreatedSkillTable.Designer.cs" />
+    <Compile Remove="Migrations\20221219032440_CreatedContactTable.cs" />
+    <Compile Remove="Migrations\20221219032440_CreatedContactTable.Designer.cs" />
+    <Compile Remove="Migrations\20221219045520_CreatedAppUserTable.cs" />
+    <Compile Remove="Migrations\20221219045520_CreatedAppUserTable.Designer.cs" />
+    <Compile Remove="Migrations\20221219045740_CreatedAppUserTable.cs" />
+    <Compile Remove="Migrations\20221219045740_CreatedAppUserTable.Designer.cs" />
+    <Compile Remove="Migrations\20221219050031_CreatedAppUserTable.cs" />
+    <Compile Remove="Migrations\20221219050031_CreatedAppUserTable.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,10 +47,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Areas\Manage\Views\Dashboard\" />
   </ItemGroup>
 
 </Project>

@@ -155,3 +155,8 @@ C:\Users\Madina Nva\source\repos\Eduhome\Eduhome\obj\Debug\netcoreapp3.1\Razor\V
 C:\Users\Madina Nva\source\repos\Eduhome\Eduhome\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\Madina Nva\source\repos\Eduhome\Eduhome\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\_ViewImports.cshtml.g.cs
 C:\Users\Madina Nva\source\repos\Eduhome\Eduhome\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\_ViewStart.cshtml.g.cs
+C:\Users\Madina Nva\source\repos\Eduhome\Eduhome\obj\Debug\netcoreapp3.1\Razor\Views\Teacher\Index.cshtml.g.cs
+C:\Users\Madina Nva\source\repos\Eduhome\Eduhome\obj\Debug\netcoreapp3.1\Razor\Views\Contact\Index.cshtml.g.cs
+C:\Users\Madina Nva\source\repos\Eduhome\Eduhome\obj\Debug\netcoreapp3.1\Razor\Views\Teacher\Detail.cshtml.g.cs
+C:\Users\Madina Nva\source\repos\Eduhome\Eduhome\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\DashBoard\Index.cshtml.g.cs
+C:\Users\Madina Nva\source\repos\Eduhome\Eduhome\obj\Debug\netcoreapp3.1\Razor\Views\Account\Index.cshtml.g.cs

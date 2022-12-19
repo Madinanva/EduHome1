@@ -11,5 +11,7 @@ namespace Eduhome.ViewModels
         public IEnumerable<Skills> Skills { get; set; }
         public IEnumerable<Subscribe> Subscribes { get; set; }
         public IEnumerable<Social>Socials { get; set; }
+        public IEnumerable<Teacher> Teachers { get; set; }
+        public Teacher Teacher { get; set; }
     }
 }

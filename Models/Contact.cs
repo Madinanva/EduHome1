@@ -10,10 +10,7 @@ namespace Eduhome.Models
     {
         [StringLength(2000)]
         public string Address {get;set;}
-        [StringLength(25)]
-        public string Phone { get; set; }
-        [StringLength(300)]
-        public string Website { get; set; }
+        public string Image { get; set; }
 
     }
 }

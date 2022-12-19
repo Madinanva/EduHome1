@@ -1,4 +1,5 @@
-﻿
+﻿@model EventVM
+
 @{
     ViewData["Title"] = "Detail";
 }
@@ -26,20 +27,18 @@
             <div class="col-md-8">
                 <div class="event-details">
                     <div class="event-details-img">
-                        <img src="~/assets/img/event/event-details.jpg" alt="event-details">
+                        <img src="~/assets/img/event/@Model.Event.Image" alt="event-details">
                         <div class="event-date">
-                            <h3>20 <span>jun</span></h3>
+                            <h3>@Model.Event.Day.ToString("dd") <span>@Model.Event.Month.ToString("MMM")</span></h3>
                         </div>
                     </div>
                     <div class="event-details-content">
-                        <h2>ADVANCE WED DEVELOPMENT WORKSHOP</h2>
+                        <h2>@Model.Event.Name</h2>
                         <ul>
-                            <li><span>time : </span>9:30am - 4:45pm</li>
-                            <li><span>venue : </span>Cristal Centre, 254 New Yourk</li>
+                            <li><span>time : </span>@Model.Event.Time</li>
+                            <li><span>venue : </span>@Model.Event.Venue</li>
                         </ul>
-                        <p>I must explain to you how all this a mistaken idea of denouncing great explorer of the rut the is lder of human happiness pcias unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit asnatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui </p>
-                        <p>I must explain to you how all this a mistaken idea of denouncing great explorer of the rut the is lder of human happiness pcias unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem </p>
-                        <p>I must explain to you how all this a mistaken idea of denouncing great explorer of the rut the is lder of human happiness pcias unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+                        <p>@Model.Event.Content  </p>
                         <div class="speakers-area fix">
                             <h4>speakers</h4>
                             <div class="single-speaker">
@@ -63,7 +62,7 @@
                         </div>
                     </div>
                     <div class="reply-area">
-                        <h3>LEAVE A REPLY</h3>
+                        <h3>@Model.EventMessages</h3>
                         <p>I must explain to you how all this a mistaken idea of ncing great explorer of the rut<br> the is lder of human happinescias unde omnis iste natus error sit volptatem </p>
                         <form id="contact-form" action="http://demo.devitems.com/eduhome/mail.php" method="post">
                             <div class="row">
@@ -114,7 +113,7 @@
                     </div>
                     <div class="single-blog-widget mb-50">
                         <div class="single-blog-banner">
-                            <a href="blog-details.html" id="blog"><img src="~/assets/img/blog/blog-img.jpg" alt="blog"></a>
+                            <a asp-action="detail" asp-controller="blog" id="blog"><img src="~/assets/img/blog/blog-img.jpg" alt="blog"></a>
                             <h2>best<br> eductaion<br> theme</h2>
                         </div>
                     </div>
@@ -122,7 +121,7 @@
                         <h3>latest post</h3>
                         <div class="single-post mb-30">
                             <div class="single-post-img">
-                                <a href="blog-details.html">
+                                <a asp-action="detail" asp-controller="blog">
                                     <img src="~/assets/img/post/post1.jpg" alt="post">
                                     <div class="blog-hover">
                                         <i class="fa fa-link"></i>
@@ -130,21 +129,20 @@
                                 </a>
                             </div>
                             <div class="single-post-content">
-                                <h4><a href="blog-details.html">English Language Course for you</a></h4>
+                                <h4><a asp-action="detail" asp-controller="blog">English Language Course for you</a></h4>
                                 <p>By Alex  /  June 20, 2017</p>
                             </div>
                         </div>
                         <div class="single-post mb-30">
                             <div class="single-post-img">
-                                <a href="blog-details.html">
-                                    <img src="~/assets/img/post/post2.jpg" alt="post">
-                                    <div class="blog-hover">
-                                        <i class="fa fa-link"></i>
-                                    </div>
-                                </a>
+                                    <a asp-action="detail" asp-controller="blog">
+                                        <div class="blog-hover">
+                                            <i class="fa fa-link"></i>
+                                        </div>
+                                    </a>
                             </div>
                             <div class="single-post-content">
-                                <h4><a href="blog-details.html">Advance Web Design and Develop</a></h4>
+                                <h4><a asp-action="detail" asp-controller="blog">English Language Course for you</a></h4>
                                 <p>By Alex  /  June 20, 2017</p>
                             </div>
                         </div>
@@ -166,12 +164,12 @@
                     <div class="single-blog-widget">
                         <h3>tags</h3>
                         <div class="single-tag">
-                            <a href="blog-details.html" class="mr-10 mb-10">course</a>
-                            <a href="blog-details.html" class="mr-10 mb-10">education</a>
-                            <a href="blog-details.html" class="mb-10">teachers</a>
-                            <a href="blog-details.html" class="mr-10">learning</a>
-                            <a href="blog-details.html" class="mr-10">university</a>
-                            <a href="blog-details.html">events</a>
+                            <a asp-action="detail" asp-controller="blog" class="mr-10 mb-10">course</a>
+                            <a asp-action="detail" asp-controller="blog" class="mr-10 mb-10">education</a>
+                            <a asp-action="detail" asp-controller="blog" class="mb-10">teachers</a>
+                            <a asp-action="detail" asp-controller="blog" class="mr-10">learning</a>
+                            <a asp-action="detail" asp-controller="blog" class="mr-10">university</a>
+                            <a asp-action="detail" asp-controller="blog">events</a>
                         </div>
                     </div>
                 </div>
